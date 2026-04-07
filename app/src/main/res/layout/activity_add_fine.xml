@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".AddFineActivity">
+
+    <!-- Header Section -->
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Add New Fine"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/btnClose"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="8dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="10dp"
+        android:src="@android:drawable/ic_menu_close_clear_cancel"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="#757575" />
+
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Add a new traffic fine to the system."
+        android:textColor="#757575"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+    <!-- Form Section -->
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="16dp"
+        app:layout_constraintBottom_toTopOf="@id/layoutButtons"
+        app:layout_constraintTop_toBottomOf="@id/tvSubtitle">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingHorizontal="24dp">
+
+            <!-- Serial Number -->
+            <TextView
+                style="@style/LabelStyle"
+                android:text="Serial Number" />
+            <EditText
+                android:id="@+id/etSerialNumber"
+                style="@style/InputStyle"
+                android:hint="Serial Number"
+                android:inputType="number" />
+
+            <!-- Violation Name -->
+            <TextView
+                style="@style/LabelStyle"
+                android:layout_marginTop="16dp"
+                android:text="Violation Name" />
+            <EditText
+                android:id="@+id/etViolationName"
+                style="@style/InputStyle"
+                android:hint="Violation Name" />
+
+            <!-- Description -->
+            <TextView
+                style="@style/LabelStyle"
+                android:layout_marginTop="16dp"
+                android:text="Description" />
+            <EditText
+                android:id="@+id/etDescription"
+                style="@style/InputStyle"
+                android:gravity="top"
+                android:hint="Description"
+                android:minLines="3"
+                android:paddingVertical="12dp" />
+
+            <!-- Fine Amount -->
+            <TextView
+                style="@style/LabelStyle"
+                android:layout_marginTop="16dp"
+                android:text="Fine Amount" />
+            <EditText
+                android:id="@+id/etFineAmount"
+                style="@style/InputStyle"
+                android:hint="Fine Amount"
+                android:inputType="numberDecimal" />
+
+            <!-- Legal Reference -->
+            <TextView
+                style="@style/LabelStyle"
+                android:layout_marginTop="16dp"
+                android:text="Legal Reference" />
+            <EditText
+                android:id="@+id/etLegalReference"
+                style="@style/InputStyle"
+                android:hint="Legal Reference (e.g., Motor Vehicles Act, S)" />
+
+            <!-- Penalty -->
+            <TextView
+                style="@style/LabelStyle"
+                android:layout_marginTop="16dp"
+                android:text="Penalty (Optional)" />
+            <EditText
+                android:id="@+id/etPenalty"
+                style="@style/InputStyle"
+                android:hint="Penalty (Optional)" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Buttons Section -->
+    <LinearLayout
+        android:id="@+id/layoutButtons"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="24dp"
+        android:layout_marginBottom="24dp"
+        android:gravity="end"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCancel"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CANCEL"
+            android:textColor="@color/black" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAddFine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:paddingHorizontal="24dp"
+            android:text="Add Fine"
+            android:textAllCaps="false"
+            app:backgroundTint="#4527A0"
+            app:cornerRadius="8dp" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

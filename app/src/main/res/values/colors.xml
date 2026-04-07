@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="primary_blue">#2962FF</color>
+    <color name="light_grey">#E0E0E0</color>
+    <color name="orange">#FF6D00</color>
+    <color name="background_light">#F5F7FA</color>
+    <color name="dark_text">#1A1C1E</color>
+    <color name="red_error">#E53935</color>
+    
+    <!-- Dashboard Icon Backgrounds -->
+    <color name="bg_fines">#E3F2FD</color>
+    <color name="bg_users">#FCE4EC</color>
+    <color name="bg_detections">#FFF8E1</color>
+    <color name="bg_login">#F3E5F5</color>
+    <color name="bg_quiz">#FFF3E0</color>
+    
+    <!-- Dashboard Icon Colors -->
+    <color name="icon_fines">#1E88E5</color>
+    <color name="icon_users">#D81B60</color>
+    <color name="icon_detections">#FBC02D</color>
+    <color name="icon_login">#8E24AA</color>
+    <color name="icon_quiz">#F4511E</color>
+
+    <!-- Manage Fines Page -->
+    <color name="fines_bg">#311B92</color>
+    <color name="search_bg">#F5F5F5</color>
+    <color name="fine_amount">#D32F2F</color>
+</resources>
